@@ -16,14 +16,14 @@ router.get("/", (req, res) => {
             ],
             include: [{
                     model: User,
-                    attributes: ["username"],
+                    //attributes: ["username"],
                 },
                 {
                     model: Comment,
                     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
                     include: {
                         model: User,
-                        attributes: ["username"],
+                       // attributes: ["username"],
                     },
                 },
             ],
@@ -44,14 +44,14 @@ router.get("/:id", (req, res) => {
             attributes: ["id", "content", "title", "created_at"],
             include: [{
                     model: User,
-                    attributes: ["username"],
+                    //attributes: ["username"],
                 },
                 {
                     model: Comment,
                     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
                     include: {
                         model: User,
-                        attributes: ["username"],
+                        //attributes: ["username"],
                     },
                 },
             ],
